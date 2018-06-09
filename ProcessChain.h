@@ -10,6 +10,8 @@ class ProcessChain {
 	Process* pChain[MaxProcesses];
 
 	Duration CalcChainDuration();
+	int currentProcesses;
+
 public:
 	//Constructor
 	ProcessChain(std::string name);
@@ -21,5 +23,5 @@ public:
 	//Insert new Process into chain
 	bool Insert(const Process& arg);
 	//output
-	friend std::ostream& operator<<(std::ostream& os, const ProcessChain& arg);
+	friend std::ostream& operator<<(std::ostream & os, const ProcessChain& arg);
 };
